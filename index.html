@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.css">
         <title>Jaya's Portfolio</title>
-        <style>
+         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
             *{
                 box-sizing:border-box;
@@ -26,6 +26,7 @@
                 left:0;
                 right: 0;
                 z-index:100;
+               
             }
             nav a{
                 color:#fff;
@@ -45,7 +46,10 @@
                 transition: 0.3s ease;
                 opacity:0;
             }
-
+            nav a:hover{
+                text-decoration:none;
+                color:rgb(255, 250, 250);
+            }
             nav a:hover::after{
                 opacity: 1;
                 border-bottom: 3px solid #fff;
@@ -113,24 +117,32 @@
             .project-title{
              max-width: 250px;
              margin:10px;
-             transition: tranform 0.4s ease;
+             transition: tranform 0.2s ease-in-out;
+           
+            }
+            .project-title>a{
+             text-decoration:none;
             }
             .project-title img{
                 max-width: 100%;
+                height: 50vh;
                 border-radius: 5px;
                 padding: 2px;
-                border: black 1px solid;
+                border: 1px solid transparent;
+                margin-bottom: 1.5%;
+                box-shadow: 2px 2px 5px grey;
             }
             .project-title p{
                 font-size: 20px;
-                margin-top:5px;
+                margin-top:3%;
                 background-color:rgb(78, 78, 78);
                 color:#fff;
-                border-radius: 3px;
+                border-radius: 7px;
+                box-shadow: 0px 2px 5px grey;
             }
 
             .project-title :hover{
-                transform: scale(1.08);
+                transform: scale(1.06);
             }
             .socialbg{
                 background-color:#adb5bd;
@@ -158,6 +170,20 @@
                 color:black;
             }
 
+            #navbar > img{
+            widows: 50px;
+            height:50px;
+            position:relative;
+            display: flex;
+            align-items: center;
+            }
+            #navbar > a{
+                font-size: 1.2rem;
+                text-decoration: none;
+                display:flex;
+                align-items: center;
+            }
+
             @media (max-width: 500px){
                 section{
                   padding: 20px;  
@@ -172,10 +198,17 @@
                    font-size: 1.4rem;
                }
             }
+            header >p {
+                text-align:center;
+            }
         </style>
+        <script>
+            console.log('Author @Jayashree_Ghosh');
+        </script>
     </head>
     <body>
      <nav id="navbar">
+         <img src="jGlogo.png" alt="logo">
          <a href="#welcome-section" class="nav">About</a>
          <a href="#projects" class="nav">Projects</a>
          <a href="#profile-link" class="nav">Social</a>
@@ -201,6 +234,10 @@
         <div class="project-title">
             <a href="https://jaya678.github.io/covid_survey.github.io/"  target="_blank" rel="noopener noreferrer"><img src="survey_form.png" alt="survey form">
             <p>Covid Survey Form</p></a>
+        </div>
+         <div class="project-title">
+            <a href="https://jaya678.github.io/Entertainment365/"  target="_blank" rel="noopener noreferrer"><img src="entertainment.png" alt="EntertainmentSite">
+            <p>Entertainment Site</p></a>
         </div>
     </div>
      </section>
